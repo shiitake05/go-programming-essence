@@ -3,7 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/csv"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"sync"
@@ -20,7 +20,7 @@ func downloadCSV(wg *sync.WaitGroup, urls []string, ch chan []byte) {
 			log.Println("cannet download CSV: ", err)
 			continue
 		}
-		b, err := ioutil.ReadAll(resp.Body)
+		b, err := io.ReadAll(resp.Body)
 		if err != nil {
 			resp.Body.Close()
 			log.Println("cannet read content: ", err)
@@ -48,9 +48,14 @@ func main() {
 	// goroutineからのコンテンツを受け取る(4)
 	for b := range ch {
 		r := csv.NewReader(bytes.NewReader(b))
+		r.Comma = ','
+		r.LazyQuotes = true
 		for {
 			records, err := r.Read()
 			if err != nil {
+				if err == io.EOF { // EOFエラーを特別に処理
+					break // ループを抜ける
+				}
 				log.Fatal(err)
 			}
 			insertRecords(records)
@@ -60,7 +65,8 @@ func main() {
 }
 
 type Record struct {
+	Name string
 }
 
-func insertRecords(records []Record) {
+func insertRecords(records []string) {
 }
