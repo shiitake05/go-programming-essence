@@ -49,9 +49,9 @@ func header(s string) string {
 	return buf.String()
 }
 
-func body(b []byte) []byte {
-	return []byte(base64.StdEncoding.EncodeToString(b))
-}
+// func body(b []byte) []byte {
+// 	return []byte(base64.StdEncoding.EncodeToString(b))
+// }
 
 func encodeBody(body []byte) []byte {
 	// ここにエンコード処理を実装
