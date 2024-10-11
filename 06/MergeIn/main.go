@@ -1,3 +1,5 @@
+// 複数のgoroutineを1つのchannelにまとめる手法
+// 2つの処理の実施状況を混ぜて画面に表示する場合などに便利
 package main
 
 import (
