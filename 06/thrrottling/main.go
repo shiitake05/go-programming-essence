@@ -61,6 +61,7 @@
 // 	fmt.Printf("%v\n", time.Since(before))
 // }
 
+// 計算上30秒になる
 package main
 
 import (
