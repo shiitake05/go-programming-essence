@@ -4,6 +4,7 @@
 package main
 
 import (
+	"C"
 	"fmt"
 	"sync"
 )
@@ -31,5 +32,3 @@ func main() {
 	}
 	wg.Wait()
 }
-
-#cgo CFLAGS: -I. // これを追加
