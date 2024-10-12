@@ -5,14 +5,12 @@ import (
 	"os"
 )
 
-// doSomethingは環境変数に依存した処理を行う関数です。
 func doSomething2() error {
 	// 環境変数DATABASE_URLを取得
 	dbURL := os.Getenv("DATABASE_URL")
 	if dbURL == "" {
 		return fmt.Errorf("DATABASE_URLが設定されていません")
 	}
-	// ここでデータベース接続などの処理を行うことができます
 	fmt.Println("接続先データベース:", dbURL)
 	return nil
 }
