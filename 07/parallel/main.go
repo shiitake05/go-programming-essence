@@ -1,4 +1,4 @@
-package calc
+package parallel
 
 import "time"
 
