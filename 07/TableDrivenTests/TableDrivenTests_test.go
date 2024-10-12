@@ -1,5 +1,5 @@
 // テストコード
-package hsd
+package TableDrivenTests
 
 import (
 	"reflect"
