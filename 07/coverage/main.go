@@ -1,5 +1,5 @@
 // テスト対象のコード
-package hsd
+package coverage
 
 func StringDistance(lhs, rhs string) int {
 	return Distance([]rune(lhs), []rune(rhs))
