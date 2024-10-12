@@ -2,7 +2,7 @@
 // しかし、testdataディレクトリは無視することが多く、.や_で始まるファイルやディレクトリも無視するようになっている。
 // 実際にtestdataディレクトリでテストする際はfilepath.Globを使うと便利
 // これはfilepath.Globの使用例
-package hsd
+package testdata
 
 import (
 	"os"
