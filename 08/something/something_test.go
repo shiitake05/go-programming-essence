@@ -11,3 +11,6 @@ func BenchmarkDoSomething(b *testing.B) {
 		DoSomething()
 	}
 }
+
+// 「go test -bench .」で全てのベンチマークを実行
+// 「go test -benchmem -bench DoSomething」でメモリロケーション量も計測できる
