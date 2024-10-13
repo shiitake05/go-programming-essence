@@ -1,7 +1,6 @@
 // spf13/cobraはボイラーテンプレートが生成できるライブラリ
 //「go install github.com/spf13/cobra-cli@latest」
 // 「cobra-cli init -l MIT -a ""」でボイラーテンプレートを生成
-// 詳細はもう少し勉強した後にやる
 
 package main
 
