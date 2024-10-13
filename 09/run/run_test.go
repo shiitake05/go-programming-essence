@@ -1,3 +1,4 @@
+// runを作っていればcommandLineをグローバル変数に置いて、テストコードから毎回書き換えることができる
 package main
 
 import (
