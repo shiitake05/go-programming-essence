@@ -1,0 +1,11 @@
+goos: darwin
+goarch: arm64
+pkg: MemoryLocation
+cpu: Apple M1
+BenchmarkMemoryLocation-8   	    9860	    120618 ns/op	   38349 B/op	    1745 allocs/op
+BenchmarkMemoryLocation-8   	    9612	    120475 ns/op	   38348 B/op	    1745 allocs/op
+BenchmarkMemoryLocation-8   	    9709	    120205 ns/op	   38349 B/op	    1745 allocs/op
+BenchmarkMemoryLocation-8   	    9619	    120411 ns/op	   38348 B/op	    1745 allocs/op
+BenchmarkMemoryLocation-8   	    9697	    119663 ns/op	   38349 B/op	    1745 allocs/op
+PASS
+ok  	MemoryLocation	7.012s
