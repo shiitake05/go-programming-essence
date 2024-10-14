@@ -13,7 +13,7 @@ import (
 )
 
 func BenchmarkQFrame(b *testing.B) {
-	b ,err := ioutil.ReadFile("iris.csv")
+	bs, err := ioutil.ReadFile("iris.csv")
 	if err != nil {
 		b.Fatal(err)
 	}
@@ -23,7 +23,7 @@ func BenchmarkQFrame(b *testing.B) {
 		var out bytes.Buffer
 		qf := qframe.ReadCSV(bytes.NewReader(bs))
 		qf = qf.Select("sepal_length", "species")
-		err = qf.ToCSV(%out)
+		err = qf.ToCSV(&out)
 		if err != nil {
 			b.Fatal(err)
 		}
